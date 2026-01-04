@@ -78,7 +78,7 @@ class MyAdvertisedDeviceCallbacks: public NimBLEAdvertisedDeviceCallbacks {
 };
 
 float hitungProbabilitasAI(int hardwareSwitch, int rssi, int last_rssi, float durationSec) {
-  float x_card = (hardwareSwitch == HIGH) ? 1.0 : 0.0; 
+  float x_card = (hardwareSwitch == LOW) ? 1.0 : 0.0; 
   float x_rssi = (float)rssi;
   rssiDelta = abs(x_rssi - (float)last_rssi); 
   float x_duration = durationSec;
